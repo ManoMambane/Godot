@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://VegetableHunter_Assets/World/tree_fat.glb" type="PackedScene" id=1]
+
+[sub_resource type="CapsuleShape" id=1]
+radius = 1.10684
+height = 6.26643
+
+[node name="Tree3" type="StaticBody"]
+
+[node name="tree_fat" parent="." instance=ExtResource( 1 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.00268776, 0.999996, 0, -0.999996, 0.00268776, 0, 0, 0 )
+shape = SubResource( 1 )

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://VegetableHunter_Assets/World/tree_default.glb" type="PackedScene" id=1]
+
+[sub_resource type="CapsuleShape" id=1]
+radius = 0.236465
+
+[node name="Tree2" type="StaticBody"]
+constant_angular_velocity = Vector3( 1, 1, 1 )
+
+[node name="tree_default" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 0.995823, 0.0913104, 0, -0.0070116, 0.0764679, 0.997047, 0.0910408, -0.992882, 0.0767886, 0, 0.248705, 0 )
+shape = SubResource( 1 )
